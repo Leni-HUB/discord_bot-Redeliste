@@ -1,59 +1,74 @@
 🗣️ Discord Redelisten-Bot
-Ein einfacher Discord-Bot zur Verwaltung einer Redeliste bei Besprechungen oder Diskussionen im Discord-Channel. Ideal für organisierte Gespräche, z. B. in Orga-Teams, Arbeitsgruppen oder Online-Meetings.
+Ein einfacher, aber effektiver Discord-Bot zur Verwaltung von Redelisten – perfekt für strukturierte Online-Diskussionen, Besprechungen oder Unterricht in Discord-Sprachkanälen.
 
-🔧 Features
-!sprechen: Fügt dich zur Redeliste hinzu.
+🚀 Features
+✅ Redeliste beitreten mit !sprechen
 
-!weristdran: Zeigt die nächste Person auf der Redeliste an.
+👀 Nächste Person anzeigen mit !weristdran
 
-!redeliste: Gibt die komplette aktuelle Redeliste aus.
+📋 Aktuelle Redeliste anzeigen mit !redeliste
 
-!fertig: Entfernt dich von der Redeliste, wenn du an der Reihe warst.
+✅ Fertig sprechen & von Liste entfernen mit !fertig (nur wer dran ist)
+
+🔐 Nutzt .env zur sicheren Token-Verwaltung
 
 🛠️ Installation
-Python installieren (mind. Version 3.8).
+1. Voraussetzungen
+Python 3.8 oder neuer
 
-Projekt clonen oder Dateien speichern.
+Discord Bot-Token (erstellbar unter Discord Developer Portal)
 
-Abhängigkeiten installieren:
+2. Setup
+bash
+Kopieren
+Bearbeiten
+git clone https://github.com/dein-name/redelisten-bot.git
+cd redelisten-bot
+pip install -r requirements.txt
+Falls keine requirements.txt vorhanden ist:
 
 bash
 Kopieren
 Bearbeiten
 pip install discord.py python-dotenv
-.env Datei erstellen im selben Verzeichnis mit folgendem Inhalt:
+3. .env Datei anlegen
+Erstelle im Projektverzeichnis eine .env Datei mit folgendem Inhalt:
 
 ini
 Kopieren
 Bearbeiten
-DISCORD_TOKEN=dein_discord_bot_token
-Bot starten:
-
+DISCORD_TOKEN=DEIN_DISCORD_BOT_TOKEN_HIER
+▶️ Starten
 bash
 Kopieren
 Bearbeiten
 python bot.py
-⚙️ Verwendung
-Der Bot reagiert auf Befehle mit dem Präfix !
+💬 Befehle im Überblick
 
-Nur der erste Platz auf der Redeliste kann sich selbst mit !fertig entfernen.
-
-Die Redeliste ist sitzungsbasiert (wird bei Neustart zurückgesetzt).
-
-🧠 Beispiel
-text
+Befehl	Beschreibung
+!sprechen	Fügt dich zur Redeliste hinzu
+!weristdran	Zeigt die nächste Person auf der Liste an
+!redeliste	Gibt die vollständige Redeliste zurück
+!fertig	Entfernt dich von der Liste, wenn du gerade dran bist
+📦 Beispielausgabe
+txt
 Kopieren
 Bearbeiten
-UserA: !sprechen
-Bot: UserA wurde zur Redeliste hinzugefügt.
-
-UserB: !sprechen
-Bot: UserB wurde zur Redeliste hinzugefügt.
-
-UserC: !weristdran
-Bot: Die nächste Person auf der Redeliste ist: UserA
+🗣️ Aktuelle Redeliste:
+1. UserA
+2. UserB
+3. UserC
 
 UserA: !fertig
 Bot: Danke UserA, du wurdest von der Redeliste entfernt.
+💡 Erweiterungsideen
+📦 Speicherung der Redeliste in einer Datei oder Datenbank
+
+⏱️ Timer für Sprechzeit pro Person
+
+🔒 Rollenbasierte Berechtigungen
+
+🌐 Web-Dashboard zur Verwaltung
+
 📄 Lizenz
-Dieses Projekt ist unter der MIT-Lizenz veröffentlicht.
+MIT License – frei nutzbar & anpassbar. ❤️
